@@ -3,10 +3,10 @@ import { useEffect, useState } from 'react';
 import { KanbanColumns } from './kanban-columns';
 import { DisplayMenu } from './display-menu';
 import { Ticket, KanbanData } from '../constants/interfaces';
-import { tmep } from './data';
+// import { tmep } from './data';
 
 export default function KanbanBoard() {
-  const [data, setData] = useState<KanbanData | null>(tmep);
+  const [data, setData] = useState<KanbanData | null>(null);
   const [grouping, setGrouping] = useState(() => localStorage.getItem('grouping') || 'status');
   const [ordering, setOrdering] = useState(() => localStorage.getItem('ordering') || 'priority');
 
