@@ -22,7 +22,7 @@ body {
   padding: 4px 8px;
   margin-left: 10px;
   background: white;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #ebebeb;
   border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
@@ -34,7 +34,7 @@ body {
   top: 90%;
   left: 2%;
   background: white;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #ebebeb;
   border-radius: 6px;
   padding: 10px;
   min-width: 200px;
@@ -53,7 +53,7 @@ body {
 
 .dropdown-item select {
   padding: 4px 8px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #ebebeb;
   border-radius: 4px;
 }
 
@@ -84,7 +84,7 @@ body {
 }
 
 .ticket-count {
-  background: #e0e0e0;
+  background: #ebebeb;
   padding: 2px 8px;
   border-radius: 12px;
   font-size: 14px;
@@ -106,7 +106,7 @@ body {
 
 .ticket-card {
   background: white;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #ebebeb;
   border-radius: 8px;
   padding: 12px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -123,6 +123,13 @@ body {
 .ticket-id {
   color: #6b6b6b;
   font-size: 14px;
+}
+
+.ticket-utils {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 0;
 }
 
 .avatar {
@@ -155,7 +162,9 @@ body {
   border-radius: 4px;
   font-size: 12px;
   background: #f0f0f0;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #ebebeb;
+  align-items: center;
+  display: flex;
 }
 
 .loading {

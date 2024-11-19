@@ -1,5 +1,6 @@
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
+import { ICONS } from '../constants/interfaces';
 
 export function DisplayMenu({ grouping, setGrouping, ordering, setOrdering }: any) {
   const [showMenu, setShowMenu] = useState(false);
@@ -7,8 +8,9 @@ export function DisplayMenu({ grouping, setGrouping, ordering, setOrdering }: an
   return (
     <div className="display-menu">
       <button className="display-button" onClick={() => setShowMenu(!showMenu)}>
+        <img src={ICONS.DisplayIcon} alt="display-icon" />
         <span>Display</span>
-        <ChevronDown />
+        {!showMenu ? <ChevronDown /> : <ChevronUp />}
       </button>
       {showMenu && (
         <div className="display-dropdown">

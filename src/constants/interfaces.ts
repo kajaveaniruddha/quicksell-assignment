@@ -10,10 +10,16 @@ import LowPriorityIcon from "../assets/icons/Img - Low Priority.svg";
 import NoPriorityIcon from "../assets/icons/No-priority.svg";
 import UrgentPriorityIcon from "../assets/icons/SVG - Urgent Priority colour.svg";
 import CancelledIcon from "../assets/icons/Cancelled.svg";
-// import DisplayIcon from "../assets/icons/Display.svg";
+import AddIcon from "../assets/icons/add.svg";
+import ThreeDotMenu from "../assets/icons/3 dot menu.svg";
+import DisplayIcon from "../assets/icons/Display.svg";
 // import DownIcon from "../assets/icons/down.svg";
 // import UrgentPriorityGreyIcon from "../assets/icons/SVG - Urgent Priority grey.svg";
-
+export const ICONS = {
+  AddIcon: AddIcon,
+  ThreeDotMenu: ThreeDotMenu,
+  DisplayIcon:DisplayIcon
+};
 export interface Ticket {
   id: string;
   title: string;

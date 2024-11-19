@@ -1,8 +1,10 @@
-import { PRIORITY_MAP } from '../constants/interfaces';
+import { PRIORITY_MAP, STATUS_ICONS } from '../constants/interfaces';
 import { Ticket, User } from '../constants/interfaces';
 
 export function TicketCard({ ticket, users }: { ticket: Ticket; users: User[] }) {
   const user = users.find((u) => u.id === ticket.userId);
+  const PRIORITY_UTILS = PRIORITY_MAP[ticket.priority as keyof typeof PRIORITY_MAP]
+  const STATUS_UTILS = STATUS_ICONS[ticket.status as keyof typeof STATUS_ICONS]
   return (
     <div className="ticket-card">
       <div className="ticket-header">
@@ -11,7 +13,12 @@ export function TicketCard({ ticket, users }: { ticket: Ticket; users: User[] })
       </div>
       <div className="ticket-title">{ticket.title}</div>
       <div className="ticket-tags">
-        <div className="priority-tag">{PRIORITY_MAP[ticket.priority as keyof typeof PRIORITY_MAP].label}</div>
+        <div className="priority-tag">
+          <img src={PRIORITY_UTILS?.icon} alt={PRIORITY_UTILS.label} className="status-icon" />
+        </div>
+        <div className='priority-tag'>
+          <img src={STATUS_UTILS?.icon} alt={STATUS_UTILS.label} className="status-icon" />
+        </div>
         {ticket.tag.map((tag) => (
           <div key={tag} className="feature-tag">
             {tag}

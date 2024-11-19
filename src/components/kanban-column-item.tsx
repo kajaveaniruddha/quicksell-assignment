@@ -1,4 +1,4 @@
-import { Ticket, User, STATUS_ICONS, PRIORITY_MAP } from '../constants/interfaces';
+import { Ticket, User, STATUS_ICONS, PRIORITY_MAP, ICONS } from '../constants/interfaces';
 import { TicketCard } from './ticket-card';
 
 export function KanbanColumn({ group, tickets, grouping, users }: { group: string; tickets: Ticket[]; grouping: string; users: User[] }) {
@@ -23,6 +23,10 @@ export function KanbanColumn({ group, tickets, grouping, users }: { group: strin
           <span>{GROUPING_TYPE_LABEL[grouping as keyof typeof GROUPING_TYPE_LABEL]}</span>
           <span className="ticket-count">{tickets.length}</span>
         </div>
+        <span className="ticket-utils">
+          <img src={ICONS.AddIcon} alt={"Add icon"} className="status-icon" />
+          <img src={ICONS.ThreeDotMenu} alt={"3 dot menu icon"} className="status-icon" />
+        </span>
       </div>
       <div className="ticket-list">
         {tickets.map((ticket) => (
